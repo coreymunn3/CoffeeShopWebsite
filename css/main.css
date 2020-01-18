@@ -1,0 +1,434 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #00171F; }
+
+.cursive {
+  font-family: 'Petit Formal Script', cursive; }
+
+.section-container {
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.std-mg-pd {
+  padding: 2.5rem;
+  margin: 2rem 0; }
+
+.grid-container {
+  display: grid;
+  row-gap: 3rem; }
+
+@media screen and (min-width: 768px) {
+  .grid-container-med2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem; } }
+
+.section-title {
+  padding: 1rem 0.5rem; }
+
+.section-title-left {
+  margin-left: 10rem; }
+
+.section-title-name {
+  font-size: 2.5rem;
+  text-transform: capitalize; }
+
+.section-title-text {
+  margin-top: 0.5rem;
+  color: #909590;
+  line-height: 1.4;
+  letter-spacing: 0.05rem; }
+
+.underline {
+  background: #E0A458;
+  width: 25%;
+  height: 2px; }
+
+.preloader {
+  position: fixed;
+  background: #003459;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.header {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+
+@media screen and (max-width: 768px) {
+  .header {
+    background: url("/CoffeeShop/img/headerBcg.jpeg") no-repeat center center/cover; } }
+
+.banner {
+  text-align: center; }
+
+.banner-title {
+  font-size: 4rem;
+  color: #EBEBD3;
+  margin-bottom: 2rem; }
+
+@media screen and (min-width: 768px) {
+  .banner-title {
+    font-size: 6rem; } }
+
+.banner-social-icon {
+  text-decoration: none;
+  color: #003459;
+  margin: 0 0.4rem;
+  transition: all 0.2s linear; }
+
+.banner-social-icon:hover {
+  color: #EBEBD3; }
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
+.video-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.navbtn {
+  position: fixed;
+  top: 3%;
+  right: 3%;
+  color: #E0A458;
+  z-index: 3;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; }
+
+.navbtn:hover {
+  transform: rotate(180deg); }
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  height: 100%;
+  text-align: left;
+  background: rgba(237, 184, 139, 0.8);
+  z-index: 3;
+  transition: all 0.2s linear; }
+
+.show-menu {
+  width: 10rem !important; }
+
+.nav-link {
+  list-style: none;
+  display: block;
+  text-decoration: none;
+  color: #474A48;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s linear; }
+
+.nav-link:hover {
+  background: #474A48;
+  color: #EDB88B;
+  padding: 0.5rem 1.5rem; }
+
+.video-toggle-container {
+  display: none; }
+
+@media screen and (min-width: 768px) {
+  .video-toggle-container {
+    display: block;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    z-index: 3; }
+  .video-toggle {
+    position: relative;
+    width: 5rem;
+    background: #E0A458;
+    padding: 0.25rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between; }
+  .toggle-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #003459;
+    height: 100%;
+    width: 50%;
+    border-radius: 0.5rem;
+    transition: all 0.2s linear; }
+  .btnSlide {
+    left: 50%; } }
+
+.about-container {
+  display: grid; }
+
+.about-img-item {
+  display: block;
+  width: 100%;
+  border-radius: 0.2rem; }
+
+@media screen and (min-width: 768px) {
+  .about-container {
+    grid-template-rows: 1fr 1fr;
+    row-gap: 3rem; }
+    .about-container .section-title {
+      align-self: center; }
+  .about-img-reverse {
+    order: -1; } }
+
+.drink {
+  background: #4D5061;
+  color: #EBEBD3;
+  text-transform: capitalize; }
+
+.drink-form, .drink-card {
+  text-align: center;
+  display: grid;
+  justify-content: center; }
+
+.drink-form-alert {
+  display: none;
+  padding: 0.25rem;
+  margin-bottom: 0.5rem;
+  display: grid;
+  grid-template-columns: 70%; }
+
+.error {
+  display: block;
+  color: red;
+  background: pink;
+  border-radius: 10px; }
+
+.success {
+  display: block;
+  color: darkgreen;
+  background: lightgreen;
+  border-radius: 10px; }
+
+.drink-form-title, .drink-card-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem; }
+
+.input-firstname, .input-lastname, .input-email {
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  background: #6D6F7D; }
+
+input::placeholder {
+  color: #EBEBD3; }
+
+.input-submit {
+  background: #E0A458;
+  color: #4D5061;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  transition: all 0.2s linear; }
+
+.input-submit:hover {
+  background: #EBEBD3; }
+
+.drink-card-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1rem;
+  column-gap: 1rem; }
+
+.person {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #6D6F7D;
+  border-radius: 0.5rem;
+  padding: 0.5rem; }
+  .person img {
+    border-radius: 50%; }
+
+@media screen and (max-width: 768px) {
+  .drink-card-list {
+    display: grid;
+    grid-template-columns: 60%;
+    justify-content: center;
+    row-gap: 1rem; }
+  .person {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    text-align: left;
+    column-gap: 1rem;
+    border: 1px solid #6D6F7D;
+    border-radius: 0.5rem;
+    padding: 0.5rem; } }
+
+.work-container {
+  display: grid;
+  row-gap: 0.5rem; }
+
+.work-item {
+  background: #E0A458;
+  overflow: hidden;
+  position: relative; }
+
+.work-item-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s linear;
+  transform: scale(1); }
+
+.work-item-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #E0A458;
+  display: inline-block;
+  font-size: 3rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  transform: scale(0); }
+
+.work-item:hover .work-item-img {
+  opacity: 0.5;
+  transform: scale(1.1); }
+
+.work-item:hover .work-item-icon {
+  transform: scale(1) translate(-50%, -50%); }
+
+.work-item-icon:hover {
+  color: #EBEBD3; }
+
+@media screen and (min-width: 576px) {
+  .work-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem; } }
+
+@media screen and (min-width: 992px) {
+  .work-container {
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr); }
+    .work-container .item1 {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2; }
+    .work-container .item4 {
+      grid-column: 3 /span 2; }
+    .work-container .item7 {
+      grid-column: 3 / span 2;
+      grid-row: 3 / span 2; } }
+
+.work-modal {
+  display: none; }
+
+.work-modal-show {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: grid;
+  justify-content: center;
+  align-items: center; }
+
+.work-modal-item {
+  position: relative;
+  background: url("/CoffeeShop/img/work-3.jpeg") no-repeat center center/cover;
+  height: 50vh;
+  width: 50VW;
+  border: 1px solid #E0A458;
+  border-radius: 5px; }
+
+.work-modal-close {
+  position: absolute;
+  font-size: 2rem;
+  color: #E0A458;
+  top: 1%;
+  left: 1%;
+  transition: color 0.2s linear;
+  cursor: pointer;
+  display: inline-block; }
+  .work-modal-close i {
+    position: absolute;
+    top: 0;
+    left: 1%; }
+
+.work-modal-close:hover {
+  color: #EBEBD3; }
+
+@media screen and (min-width: 768px) {
+  .work-modal-item {
+    height: 400px;
+    width: 500px; } }
+
+.contact-container {
+  display: grid;
+  column-gap: 1rem; }
+
+.contact-info {
+  display: grid;
+  margin: 2rem 0; }
+
+.contact-item {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-gap: 1rem;
+  padding: 0.5rem; }
+  .contact-item .contact-item-icon {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: #E0A458; }
+  .contact-item .contact-item-info .contact-item-title {
+    line-height: 1.4;
+    color: #E0A458;
+    font-style: italic;
+    letter-spacing: 0.1rem; }
+  .contact-item .contact-item-info .contact-item-text {
+    text-transform: uppercase;
+    color: #909590;
+    font-style: 0.9rem; }
+
+@media screen and (min-width: 768px) {
+  .contact-info {
+    grid-template-columns: repeat(3, 1fr);
+    order: -1; } }
+
+@media screen and (min-width: 992px) {
+  .contact-container {
+    grid-template-columns: 3fr 1fr; }
+  .contact-info {
+    grid-template-columns: 1fr;
+    order: 1; } }
